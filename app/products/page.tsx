@@ -22,7 +22,7 @@ const Products = () => {
       }
     };
     getProducts();
-  }, []);
+  }, [setProducts]);
   return (
     <Layout>
       <Link

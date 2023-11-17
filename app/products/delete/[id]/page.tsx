@@ -60,7 +60,7 @@ const ProductPage: FC<PageProps> = ({ params }) => {
           <h1 className="mb-5">
             Do you want to delete{" "}
             <span className="font-extrabold ml-2">
-              "{currentProduct.title}"?
+              {/* "{currentProduct.title}"? */}
             </span>
           </h1>
           <button
