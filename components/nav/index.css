@@ -1,0 +1,11 @@
+* {
+  @apply font-extrabold;
+}
+
+.menu-items {
+  @apply flex gap-1 items-center p-1 font-bold;
+}
+
+.active {
+  @apply bg-white text-blue-800 rounded-s-lg px-4;
+}

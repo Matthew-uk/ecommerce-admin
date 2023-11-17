@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-family: fantasy;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input,
+textarea {
+  @apply border-2 border-gray-300 rounded-md p-1 focus:border-blue-900 w-full mb-2;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1 {
+  @apply text-blue-900 text-xl mb-2;
+}
+
+label {
+  @apply text-blue-900;
+}
+
+.btn-primary {
+  @apply bg-blue-900 text-white px-4 rounded-md py-1;
+}
+
+table.basic {
+  @apply mt-4 w-full;
+}
+
+table.basic thead tr td {
+  @apply bg-blue-900 text-white;
+}
+
+table.basic tr td {
+  @apply mt-10 border border-blue-200 p-1 font-bold w-11/12;
+}
+
+table.basic a {
+  @apply bg-blue-900 text-white py-1 rounded-md text-center flex items-center justify-center mb-1;
+}
+
+.btn {
+  @apply p-2 mx-2 cursor-pointer text-white rounded-md;
+}
+
+.btn-red {
+  @apply bg-red-500;
+}
+
+.btn-basic {
+  @apply bg-gray-300;
 }
