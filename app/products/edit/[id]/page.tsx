@@ -4,11 +4,11 @@ import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { BsUpload } from "react-icons/bs";
-interface pageProps {
+interface PageProps {
   params: { id: string };
 }
 
-const page: FC<pageProps> = ({ params }) => {
+const Page: FC<PageProps> = ({ params }) => {
   const [currentProduct, setCurrentProduct] = useState({});
   const [title, settitle] = useState("");
   const [description, setdescription] = useState("");
@@ -25,7 +25,7 @@ const page: FC<pageProps> = ({ params }) => {
       console.log(product.data);
     };
     getProduct();
-  }, []);
+  }, [params.id]);
 
   useEffect(() => {
     setdescription(currentProduct.description);
@@ -128,4 +128,4 @@ const page: FC<pageProps> = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
